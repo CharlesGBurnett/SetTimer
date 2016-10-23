@@ -8,13 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIPickerViewDelegate,UIPickerViewDataSource{
 
     @IBOutlet weak var setButton: UIButton!
     @IBOutlet weak var repButton: UIButton!
     @IBOutlet weak var timerButton: UIButton!
     @IBOutlet weak var pauseButton: UIButton!
-    @IBOutlet weak var pickerView: UIPickerView!
     
     var timer = Timer()
     var counter = 0
@@ -25,10 +24,26 @@ class ViewController: UIViewController {
     var setCounter = 0
     var repCounter = 0
     
+    var pickerViewData = [["a"], ["b"]]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view, typically from a nib.
-        pickerView.isHidden = true
+        var hourList = [String]()
+        var minuteList = [String]()
+        var secondList = [String]()
+        
+        for i in 0...23{
+            print("\(String(i))")
+            hourList.append(String(i))
+        }
+        for i in 0...59{
+            minuteList.append(String(i))
+            secondList.append(String(i))
+        }
+        pickerViewData = [hourList, minuteList, secondList]
+        
     }
     
     override func viewDidLayoutSubviews() {
@@ -45,11 +60,13 @@ class ViewController: UIViewController {
     @IBAction func setPressed(_ sender: AnyObject){
         setCounter += 1
         setButton.setTitle("Set \(setCounter)", for: UIControlState.normal)
+        repCounter = 0
+        repButton.setTitle("Reps", for: UIControlState.normal)
     }
 
     @IBAction func repPressed(_ sender: AnyObject) {
         repCounter += 1
-        repButton.setTitle("Rep \(repCounter)", for: UIControlState.normal)
+        repButton.setTitle("\(repCounter) Reps", for: UIControlState.normal)
     }
     
     @IBAction func startPressed(_ sender: AnyObject) {
@@ -130,6 +147,24 @@ class ViewController: UIViewController {
         let alert = UIAlertController(title: "No time set", message: "Please set the time for the timer", preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 3
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+
+            return pickerViewData[component].count
+
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return pickerViewData[component][row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        print("picked number: \(pickerViewData[component][row])")
     }
 }
 
