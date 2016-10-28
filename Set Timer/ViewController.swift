@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIPickerViewDelegate,UIPickerViewDataSource{
+class ViewController: UIViewController {
 
     @IBOutlet weak var setButton: UIButton!
     @IBOutlet weak var repButton: UIButton!
@@ -17,33 +17,15 @@ class ViewController: UIViewController, UIPickerViewDelegate,UIPickerViewDataSou
     
     var timer = Timer()
     var counter = 0
-    var minutes = 0
-    var seconds = 0
     var isPaused = false
         
     var setCounter = 0
     var repCounter = 0
     
-    var pickerViewData = [["a"], ["b"]]
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view, typically from a nib.
-        var hourList = [String]()
-        var minuteList = [String]()
-        var secondList = [String]()
-        
-        for i in 0...23{
-            print("\(String(i))")
-            hourList.append(String(i))
-        }
-        for i in 0...59{
-            minuteList.append(String(i))
-            secondList.append(String(i))
-        }
-        pickerViewData = [hourList, minuteList, secondList]
-        
     }
     
     override func viewDidLayoutSubviews() {
@@ -142,29 +124,28 @@ class ViewController: UIViewController, UIPickerViewDelegate,UIPickerViewDataSou
         return (seconds / 3600, (seconds % 3600) / 60, (seconds % 3600) % 60)
     }
     
+    
+    func hoursMinutesSecondsToSeconds(hours: Int, minutes: Int, seconds: Int) -> Int
+    {
+        let hoursToSeconds = hours * 60 * 60
+        let minutesToSeconds = minutes * 60
+        
+        return hoursToSeconds + minutesToSeconds + seconds
+    }
+    
     func timerNotSetAlert()
     {
         let alert = UIAlertController(title: "No time set", message: "Please set the time for the timer", preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
+    //unwind segue
     
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 3
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-
-            return pickerViewData[component].count
-
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return pickerViewData[component][row]
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        print("picked number: \(pickerViewData[component][row])")
+    @IBAction func unwindToThisView(sender: UIStoryboardSegue) {
+            if let sourceViewController = sender.source as? PickerViewController {
+                self.counter = hoursMinutesSecondsToSeconds(hours: sourceViewController.hours, minutes: sourceViewController.minutes, seconds: sourceViewController.seconds)
+        }
+        
     }
 }
 
