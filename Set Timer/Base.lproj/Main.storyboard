@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -21,6 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Trb-W8-4iC">
+                                <rect key="frame" x="295" y="35" width="64" height="64"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="0KX-4O-M7j"/>
@@ -35,12 +39,14 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kAy-hC-nFO">
+                                <rect key="frame" x="168" y="629" width="39" height="30"/>
                                 <state key="normal" title="Reset"/>
                                 <connections>
                                     <action selector="resetPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YEv-QA-0FT"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="maR-VB-keZ">
+                                <rect key="frame" x="16" y="35" width="64" height="64"/>
                                 <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="64" id="WeG-a1-PTw"/>
@@ -54,19 +60,21 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4MG-hq-8QA">
+                                <rect key="frame" x="167" y="421.5" width="42" height="30"/>
                                 <state key="normal" title="Pause"/>
                                 <connections>
                                     <action selector="pauseTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gbe-dV-PYC"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fbn-uX-xzO">
+                                <rect key="frame" x="107.5" y="253.5" width="160" height="160"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="160" id="8QM-Xe-JCA"/>
                                     <constraint firstAttribute="height" constant="160" id="LJ3-jd-RsE"/>
                                     <constraint firstAttribute="width" secondItem="Fbn-uX-xzO" secondAttribute="height" multiplier="1:1" id="nzg-xZ-6si"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Start">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -75,7 +83,16 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yrM-Cu-0ga">
-                                <state key="normal" title="Set Time"/>
+                                <rect key="frame" x="107" y="531" width="160" height="48"/>
+                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="4mQ-XZ-eS3"/>
+                                    <constraint firstAttribute="height" constant="48" id="95c-pT-dhd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Set Time">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="hCh-aU-qD7" kind="presentation" id="HJ0-UV-DXM"/>
                                 </connections>
@@ -87,13 +104,13 @@
                             <constraint firstItem="kAy-hC-nFO" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="310.5" id="Cz4-Is-hBj"/>
                             <constraint firstItem="maR-VB-keZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="15" id="Eoc-2p-Jrq"/>
                             <constraint firstItem="4MG-hq-8QA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="0.5" id="IhE-rO-3ff"/>
+                            <constraint firstItem="yrM-Cu-0ga" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Nbt-x8-8AI"/>
                             <constraint firstItem="Fbn-uX-xzO" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="QwH-mt-tRN"/>
                             <constraint firstItem="Trb-W8-4iC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="15" id="Sg0-Ue-hhA"/>
-                            <constraint firstItem="yrM-Cu-0ga" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="32" id="aI3-rM-YLy"/>
+                            <constraint firstItem="kAy-hC-nFO" firstAttribute="top" secondItem="yrM-Cu-0ga" secondAttribute="bottom" constant="50" id="bci-oY-x3w"/>
                             <constraint firstItem="kAy-hC-nFO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cxc-Hq-4qy"/>
                             <constraint firstAttribute="leadingMargin" secondItem="maR-VB-keZ" secondAttribute="leading" id="f6R-eT-92d"/>
                             <constraint firstItem="Fbn-uX-xzO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="f83-hn-UEd"/>
-                            <constraint firstItem="yrM-Cu-0ga" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iiv-Fd-Fhp"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kAy-hC-nFO" secondAttribute="bottom" constant="8" id="jDC-TR-vId"/>
                             <constraint firstItem="4MG-hq-8QA" firstAttribute="top" secondItem="Fbn-uX-xzO" secondAttribute="bottom" constant="8" symbolic="YES" id="jEQ-p1-wl6"/>
                         </constraints>
@@ -102,12 +119,13 @@
                         <outlet property="pauseButton" destination="4MG-hq-8QA" id="Gfk-xD-QWg"/>
                         <outlet property="repButton" destination="Trb-W8-4iC" id="YDP-L8-dbd"/>
                         <outlet property="setButton" destination="maR-VB-keZ" id="QWj-x6-rqm"/>
+                        <outlet property="timeSetButton" destination="yrM-Cu-0ga" id="lby-eq-CZG"/>
                         <outlet property="timerButton" destination="Fbn-uX-xzO" id="ton-h9-N8h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="252.17391304347828" y="225.00000000000003"/>
+            <point key="canvasLocation" x="252" y="224.4377811094453"/>
         </scene>
         <!--Picker View Controller-->
         <scene sceneID="tHh-ZH-1qy">
@@ -122,12 +140,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SEO-iu-E13">
+                                <rect key="frame" x="0.0" y="225.5" width="375" height="216"/>
                                 <connections>
                                     <outlet property="dataSource" destination="hCh-aU-qD7" id="GzH-Dg-8Bz"/>
                                     <outlet property="delegate" destination="hCh-aU-qD7" id="nUi-Mt-eF2"/>
                                 </connections>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rxt-k3-aeg">
+                                <rect key="frame" x="167" y="451.5" width="41" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Done"/>
                                 <connections>

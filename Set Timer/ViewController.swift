@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
 
@@ -14,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var repButton: UIButton!
     @IBOutlet weak var timerButton: UIButton!
     @IBOutlet weak var pauseButton: UIButton!
+    @IBOutlet weak var timeSetButton: UIButton!
     
     var timer = Timer()
     var counter = 0
@@ -32,6 +34,7 @@ class ViewController: UIViewController {
         setButton.layer.cornerRadius = setButton.frame.width / 2.0
         repButton.layer.cornerRadius = repButton.frame.width / 2.0
         timerButton.layer.cornerRadius = 10
+        timeSetButton.layer.cornerRadius = 10
     }
 
     override func didReceiveMemoryWarning() {
@@ -87,12 +90,16 @@ class ViewController: UIViewController {
     
     func timerAction() {
         if counter == 0 {
-           timer.invalidate()
+            timerButton.setTitle("Start", for: UIControlState.normal)
+            AudioServicesPlaySystemSound(1005)
+            timer.invalidate()
             return
         }
         
         counter -= 1
         let (hours,minutes,seconds) = secondsToHoursMinutesSeconds(seconds: counter)
+        
+        print("Hours: \(hours) Minutes: \(minutes) Seconds: \(seconds)")
         if hours == 0 {
             if seconds >= 10 {
                 timerButton.setTitle("\(minutes):\(seconds)", for: UIControlState.normal)
@@ -107,10 +114,10 @@ class ViewController: UIViewController {
             if minutes >= 10 && seconds >= 10 {
                 timerButton.setTitle("\(hours):\(minutes):\(seconds)", for: UIControlState.normal)
             }
-            if minutes >= 10 && seconds < 10 {
+            else if minutes >= 10 && seconds < 10 {
                 timerButton.setTitle("\(hours):\(minutes):0\(seconds)", for: UIControlState.normal)
             }
-            if minutes < 10 && seconds >= 10 {
+            else if minutes < 10 && seconds >= 10 {
                 timerButton.setTitle("\(hours):0\(minutes):\(seconds)", for: UIControlState.normal)
             }
             else
