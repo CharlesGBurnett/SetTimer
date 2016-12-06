@@ -23,6 +23,10 @@ class ViewController: UIViewController {
     var counter = 0
     var isPaused = false
     
+    var player: AVAudioPlayer?
+    let url = Bundle.main.url(forResource: "alarm", withExtension: "wav")!
+
+    
 
     var setCounter = 0
     var repCounter = 0
@@ -106,8 +110,16 @@ class ViewController: UIViewController {
     func timerAction() {
         if counter == 0 {
             let state: UIApplicationState = UIApplication.shared.applicationState
-            if state == .active {
-                AudioServicesPlaySystemSound(1005)
+            if state == .active {                
+                do {
+                    player = try AVAudioPlayer(contentsOf: url)
+                    guard let player = player else { return }
+                    
+                    player.prepareToPlay()
+                    player.play()
+                } catch let error {
+                    print(error.localizedDescription)
+                }
             }
             timerButton.setTitle("Start", for: UIControlState.normal)
             timer.invalidate()
@@ -172,7 +184,7 @@ class ViewController: UIViewController {
             content.title = "Timer's Done"
             content.subtitle = "Start your next set"
             content.body = "Click to return to the app"
-            content.sound = UNNotificationSound.default()
+            content.sound = UNNotificationSound.init(named: "alarm.wav")
             
             let trigger = UNTimeIntervalNotificationTrigger(
                 timeInterval: TimeInterval(counter),

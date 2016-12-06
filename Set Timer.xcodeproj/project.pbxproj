@@ -15,6 +15,7 @@
 		492776AD1DAB0CC9000B47B1 /* Set_TimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492776AC1DAB0CC9000B47B1 /* Set_TimerTests.swift */; };
 		492776B81DAB0CC9000B47B1 /* Set_TimerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492776B71DAB0CC9000B47B1 /* Set_TimerUITests.swift */; };
 		494AAD291DC2CB5E005E334C /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494AAD281DC2CB5E005E334C /* PickerViewController.swift */; };
+		49D1D8C31DF68C02008949AE /* alarm.wav in Resources */ = {isa = PBXBuildFile; fileRef = 49D1D8C21DF68C02008949AE /* alarm.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		492776B71DAB0CC9000B47B1 /* Set_TimerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Set_TimerUITests.swift; sourceTree = "<group>"; };
 		492776B91DAB0CC9000B47B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		494AAD281DC2CB5E005E334C /* PickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
+		49D1D8C21DF68C02008949AE /* alarm.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = alarm.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		492776961DAB0CC9000B47B1 /* Set Timer */ = {
 			isa = PBXGroup;
 			children = (
+				49D1D8C21DF68C02008949AE /* alarm.wav */,
 				492776971DAB0CC9000B47B1 /* AppDelegate.swift */,
 				492776991DAB0CC9000B47B1 /* ViewController.swift */,
 				494AAD281DC2CB5E005E334C /* PickerViewController.swift */,
@@ -238,6 +241,7 @@
 			files = (
 				492776A21DAB0CC9000B47B1 /* LaunchScreen.storyboard in Resources */,
 				4927769F1DAB0CC9000B47B1 /* Assets.xcassets in Resources */,
+				49D1D8C31DF68C02008949AE /* alarm.wav in Resources */,
 				4927769D1DAB0CC9000B47B1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
