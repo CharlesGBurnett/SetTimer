@@ -106,9 +106,9 @@ class PickerViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
         minuteLabel.text = "Minutes"
         secondLabel.text = "Sec"
         
-        hourLabel.font = UIFont.boldSystemFont(ofSize: 11)
-        minuteLabel.font = UIFont.boldSystemFont(ofSize: 11)
-        secondLabel.font = UIFont.boldSystemFont(ofSize: 11)
+        hourLabel.font = UIFont.boldSystemFont(ofSize: 12)
+        minuteLabel.font = UIFont.boldSystemFont(ofSize: 12)
+        secondLabel.font = UIFont.boldSystemFont(ofSize: 12)
         
         hourLabel.textColor = UIColor.orange
         minuteLabel.textColor = UIColor.orange

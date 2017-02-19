@@ -19,11 +19,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var timeSetButton: UIButton!
     @IBOutlet weak var startButton: UIButton!
     
-    var isGrantedNotificationAccess:Bool = false
-    var timer = Timer()
+    var timeWhenStarted = 0.0
+    var secondsForTimer = 0
     var counter = 0
+
     var isPaused = false
+    var isGrantedNotificationAccess:Bool = false
     
+    var timer = Timer()
     var player: AVAudioPlayer?
     let url = Bundle.main.url(forResource: "alarm", withExtension: "wav")!
 
@@ -42,6 +45,30 @@ class ViewController: UIViewController {
         )
         pauseButton.setTitle("", for: UIControlState.normal)
         pauseButton.isUserInteractionEnabled = false
+        
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(self.didEnterForeground),
+            name: .UIApplicationDidBecomeActive,
+            object: nil)
+    }
+    
+    func didEnterForeground() {
+        invalidateTimer()
+
+        let timeInterval = NSDate().timeIntervalSince1970
+        
+        let timeRemaining = secondsForTimer - Int(round(timeInterval-timeWhenStarted))
+        print("\(secondsForTimer - Int(round(timeInterval-timeWhenStarted)))")
+        
+        if timeRemaining > 0
+        {
+            startTimer(count: timeRemaining)
+        }
+        
+        else{
+            timerButton.setTitle("Start", for: UIControlState.normal)
+        }
     }
     
     override func viewDidLayoutSubviews() {
@@ -50,7 +77,7 @@ class ViewController: UIViewController {
         timerButton.layer.cornerRadius = 10
         timeSetButton.layer.cornerRadius = 10
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -76,11 +103,10 @@ class ViewController: UIViewController {
         }
             
         else {
+        secondsForTimer = counter
+        timeWhenStarted = NSDate().timeIntervalSince1970
         setBGNotification()
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
-        startButton.isUserInteractionEnabled = false
-        pauseButton.setTitle("Pause", for: UIControlState.normal)
-        pauseButton.isUserInteractionEnabled = true
+            startTimer(count:counter)
         }
     }
     
@@ -125,18 +151,14 @@ class ViewController: UIViewController {
                     print(error.localizedDescription)
                 }
             }
+            invalidateTimer()
             timerButton.setTitle("Start", for: UIControlState.normal)
-            timer.invalidate()
-            startButton.isUserInteractionEnabled = true
-            pauseButton.setTitle("", for: UIControlState.normal)
-            pauseButton.isUserInteractionEnabled = false
+
             return
         }
         
-        counter -= 1
         let (hours,minutes,seconds) = secondsToHoursMinutesSeconds(seconds: counter)
         
-        print("Hours: \(hours) Minutes: \(minutes) Seconds: \(seconds)")
         if hours == 0 {
             if seconds >= 10 {
                 timerButton.setTitle("\(minutes):\(seconds)", for: UIControlState.normal)
@@ -162,6 +184,7 @@ class ViewController: UIViewController {
                 timerButton.setTitle("\(hours):0\(minutes):0\(seconds)", for: UIControlState.normal)
             }
         }
+        counter -= 1
     }
     
     func secondsToHoursMinutesSeconds (seconds : Int) -> (Int, Int, Int) {
@@ -204,10 +227,26 @@ class ViewController: UIViewController {
             )
             
             UNUserNotificationCenter.current().add(
-                request, withCompletionHandler: nil)
-            
-            startButton.isUserInteractionEnabled = true
+                request, withCompletionHandler:nil
+            )
         }
+    }
+    
+    func startTimer(count: Int)
+    {
+        counter = count
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
+        startButton.isUserInteractionEnabled = false
+        pauseButton.setTitle("Pause", for: UIControlState.normal)
+        pauseButton.isUserInteractionEnabled = true
+    }
+    
+    func invalidateTimer()
+    {
+        timer.invalidate()
+        startButton.isUserInteractionEnabled = true
+        pauseButton.setTitle("", for: UIControlState.normal)
+        pauseButton.isUserInteractionEnabled = false
     }
     
     //unwind segue
