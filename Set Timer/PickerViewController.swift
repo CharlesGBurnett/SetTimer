@@ -10,6 +10,8 @@ import UIKit
 
 class PickerViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
     
+    @IBOutlet weak var timePickerView: UIPickerView!
+    
     var pickerViewData = [["a"], ["b"]]
     var hours = 0
     var minutes = 0
@@ -18,6 +20,7 @@ class PickerViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
     override func viewDidLoad() {
         // Do any additional setup after loading the view.
         super.viewDidLoad()
+        
         var hourList = [String]()
         var minuteList = [String]()
         var secondList = [String]()
@@ -64,7 +67,62 @@ class PickerViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
         
         
     }
-
+    
+    override func viewWillLayoutSubviews() {
+        print("width \(timePickerView.frame.width)")
+        
+        let pickerWidth = self.view.frame.width
+        
+        var hourXVal = pickerWidth - 325.0
+        var minXVal = pickerWidth - 185.0
+        var secXVal = pickerWidth - 45.0
+        
+        if(self.view.frame.width == 320)
+        {
+            hourXVal = pickerWidth - 245.0
+            minXVal = pickerWidth - 135.0
+            secXVal = pickerWidth - 30.0
+        }
+            
+        else if(self.view.frame.width == 414)
+        {
+            hourXVal = pickerWidth - 325.0
+            minXVal = pickerWidth - 185.0
+            secXVal = pickerWidth - 45.0
+        }
+        
+        else if(self.view.frame.width == 375)
+        {
+            hourXVal = pickerWidth - 285.0
+            minXVal = pickerWidth - 165.0
+            secXVal = pickerWidth - 35.0
+        }
+        
+        let hourLabel = UILabel(frame: CGRect(x:hourXVal, y:88, width: 100, height:40))
+        let minuteLabel = UILabel(frame: CGRect(x:minXVal, y:88, width: 100, height:40))
+        let secondLabel = UILabel(frame: CGRect(x:secXVal, y:88, width: 100, height:40))
+        
+        hourLabel.text = "Hours"
+        minuteLabel.text = "Minutes"
+        secondLabel.text = "Sec"
+        
+        hourLabel.font = UIFont.boldSystemFont(ofSize: 11)
+        minuteLabel.font = UIFont.boldSystemFont(ofSize: 11)
+        secondLabel.font = UIFont.boldSystemFont(ofSize: 11)
+        
+        hourLabel.textColor = UIColor.orange
+        minuteLabel.textColor = UIColor.orange
+        secondLabel.textColor = UIColor.orange
+        
+        self.timePickerView.addSubview(hourLabel)
+        self.timePickerView.addSubview(minuteLabel)
+        self.timePickerView.addSubview(secondLabel)
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+        let attributedString = NSAttributedString(string: pickerViewData[component][row], attributes: [NSForegroundColorAttributeName : UIColor.orange])
+        return attributedString
+    }
     /*
     // MARK: - Navigation
 

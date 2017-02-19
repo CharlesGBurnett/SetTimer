@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var timerButton: UIButton!
     @IBOutlet weak var pauseButton: UIButton!
     @IBOutlet weak var timeSetButton: UIButton!
+    @IBOutlet weak var startButton: UIButton!
     
     var isGrantedNotificationAccess:Bool = false
     var timer = Timer()
@@ -39,7 +40,8 @@ class ViewController: UIViewController {
                 self.isGrantedNotificationAccess = granted
         }
         )
-        // Do any additional setup after loading the view, typically from a nib.
+        pauseButton.setTitle("", for: UIControlState.normal)
+        pauseButton.isUserInteractionEnabled = false
     }
     
     override func viewDidLayoutSubviews() {
@@ -72,11 +74,13 @@ class ViewController: UIViewController {
             timerNotSetAlert()
             return
         }
-                
             
         else {
         setBGNotification()
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
+        startButton.isUserInteractionEnabled = false
+        pauseButton.setTitle("Pause", for: UIControlState.normal)
+        pauseButton.isUserInteractionEnabled = true
         }
     }
     
@@ -91,14 +95,14 @@ class ViewController: UIViewController {
         timerButton.setTitle("Start", for: UIControlState.normal)
     }
     @IBAction func pauseTimer(_ sender: AnyObject) {
-        if isPaused == false {
+        if isPaused == false && counter >= 0 {
         timer.invalidate()
         UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
 
         pauseButton.setTitle("Play", for: UIControlState.normal)
         isPaused = true
         }
-        else {
+        else if isPaused == true && counter >= 0 {
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
         setBGNotification()
 
@@ -123,6 +127,9 @@ class ViewController: UIViewController {
             }
             timerButton.setTitle("Start", for: UIControlState.normal)
             timer.invalidate()
+            startButton.isUserInteractionEnabled = true
+            pauseButton.setTitle("", for: UIControlState.normal)
+            pauseButton.isUserInteractionEnabled = false
             return
         }
         
@@ -182,8 +189,8 @@ class ViewController: UIViewController {
         if isGrantedNotificationAccess{
             let content = UNMutableNotificationContent()
             content.title = "Timer's Done"
-            content.subtitle = "Start your next set"
-            content.body = "Click to return to the app"
+            content.subtitle = "It's time to start your next set"
+            content.body = "Tap to return to the app"
             content.sound = UNNotificationSound.init(named: "alarm.wav")
             
             let trigger = UNTimeIntervalNotificationTrigger(
@@ -198,6 +205,8 @@ class ViewController: UIViewController {
             
             UNUserNotificationCenter.current().add(
                 request, withCompletionHandler: nil)
+            
+            startButton.isUserInteractionEnabled = true
         }
     }
     

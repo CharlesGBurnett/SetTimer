@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -20,11 +20,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Trb-W8-4iC">
-                                <rect key="frame" x="295" y="35" width="64" height="64"/>
+                                <rect key="frame" x="240" y="35" width="64" height="64"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="0KX-4O-M7j"/>
@@ -39,7 +39,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kAy-hC-nFO">
-                                <rect key="frame" x="168" y="629" width="39" height="30"/>
+                                <rect key="frame" x="140.5" y="442" width="39" height="30"/>
                                 <state key="normal" title="Reset"/>
                                 <connections>
                                     <action selector="resetPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YEv-QA-0FT"/>
@@ -60,14 +60,14 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4MG-hq-8QA">
-                                <rect key="frame" x="167" y="421.5" width="42" height="30"/>
+                                <rect key="frame" x="139.5" y="328" width="42" height="30"/>
                                 <state key="normal" title="Pause"/>
                                 <connections>
                                     <action selector="pauseTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gbe-dV-PYC"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fbn-uX-xzO">
-                                <rect key="frame" x="107.5" y="253.5" width="160" height="160"/>
+                                <rect key="frame" x="80" y="160" width="160" height="160"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="160" id="8QM-Xe-JCA"/>
@@ -83,7 +83,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yrM-Cu-0ga">
-                                <rect key="frame" x="107" y="531" width="160" height="48"/>
+                                <rect key="frame" x="80" y="377" width="160" height="48"/>
                                 <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="160" id="4mQ-XZ-eS3"/>
@@ -101,13 +101,12 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="Trb-W8-4iC" secondAttribute="trailing" id="5UP-l0-LEn"/>
-                            <constraint firstItem="kAy-hC-nFO" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="310.5" id="Cz4-Is-hBj"/>
                             <constraint firstItem="maR-VB-keZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="15" id="Eoc-2p-Jrq"/>
                             <constraint firstItem="4MG-hq-8QA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="0.5" id="IhE-rO-3ff"/>
                             <constraint firstItem="yrM-Cu-0ga" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Nbt-x8-8AI"/>
                             <constraint firstItem="Fbn-uX-xzO" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="QwH-mt-tRN"/>
                             <constraint firstItem="Trb-W8-4iC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="15" id="Sg0-Ue-hhA"/>
-                            <constraint firstItem="kAy-hC-nFO" firstAttribute="top" secondItem="yrM-Cu-0ga" secondAttribute="bottom" constant="50" id="bci-oY-x3w"/>
+                            <constraint firstItem="kAy-hC-nFO" firstAttribute="top" secondItem="yrM-Cu-0ga" secondAttribute="bottom" constant="17" id="bci-oY-x3w"/>
                             <constraint firstItem="kAy-hC-nFO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cxc-Hq-4qy"/>
                             <constraint firstAttribute="leadingMargin" secondItem="maR-VB-keZ" secondAttribute="leading" id="f6R-eT-92d"/>
                             <constraint firstItem="Fbn-uX-xzO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="f83-hn-UEd"/>
@@ -119,6 +118,7 @@
                         <outlet property="pauseButton" destination="4MG-hq-8QA" id="Gfk-xD-QWg"/>
                         <outlet property="repButton" destination="Trb-W8-4iC" id="YDP-L8-dbd"/>
                         <outlet property="setButton" destination="maR-VB-keZ" id="QWj-x6-rqm"/>
+                        <outlet property="startButton" destination="Fbn-uX-xzO" id="ZGY-qc-3Dn"/>
                         <outlet property="timeSetButton" destination="yrM-Cu-0ga" id="lby-eq-CZG"/>
                         <outlet property="timerButton" destination="Fbn-uX-xzO" id="ton-h9-N8h"/>
                     </connections>
@@ -136,18 +136,19 @@
                         <viewControllerLayoutGuide type="bottom" id="3TQ-im-4od"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="vUC-qi-tox">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SEO-iu-E13">
-                                <rect key="frame" x="0.0" y="225.5" width="375" height="216"/>
+                                <rect key="frame" x="0.0" y="132" width="320" height="216"/>
+                                <color key="backgroundColor" white="0.14999999999999999" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="hCh-aU-qD7" id="GzH-Dg-8Bz"/>
                                     <outlet property="delegate" destination="hCh-aU-qD7" id="nUi-Mt-eF2"/>
                                 </connections>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rxt-k3-aeg">
-                                <rect key="frame" x="167" y="451.5" width="41" height="33"/>
+                                <rect key="frame" x="139.5" y="358" width="41" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Done"/>
                                 <connections>
@@ -155,7 +156,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.14999999999999999" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Rxt-k3-aeg" firstAttribute="top" secondItem="SEO-iu-E13" secondAttribute="bottom" constant="10" id="7Tz-Ts-I6j"/>
                             <constraint firstItem="Rxt-k3-aeg" firstAttribute="centerX" secondItem="vUC-qi-tox" secondAttribute="centerX" id="Daj-Li-oPH"/>
@@ -164,6 +165,9 @@
                             <constraint firstItem="SEO-iu-E13" firstAttribute="centerY" secondItem="vUC-qi-tox" secondAttribute="centerY" id="oO2-pY-rhS"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="timePickerView" destination="SEO-iu-E13" id="gfh-3Z-NmE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZRA-Nb-ccb" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="5eI-Um-mJ3" userLabel="Exit" sceneMemberID="exit"/>
