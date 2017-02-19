@@ -93,9 +93,9 @@ class PickerViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
         
         else if(self.view.frame.width == 375)
         {
-            hourXVal = pickerWidth - 285.0
+            hourXVal = pickerWidth - 290.0
             minXVal = pickerWidth - 165.0
-            secXVal = pickerWidth - 35.0
+            secXVal = pickerWidth - 40.0
         }
         
         let hourLabel = UILabel(frame: CGRect(x:hourXVal, y:88, width: 100, height:40))
@@ -106,9 +106,16 @@ class PickerViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
         minuteLabel.text = "Minutes"
         secondLabel.text = "Sec"
         
-        hourLabel.font = UIFont.boldSystemFont(ofSize: 12)
-        minuteLabel.font = UIFont.boldSystemFont(ofSize: 12)
-        secondLabel.font = UIFont.boldSystemFont(ofSize: 12)
+        hourLabel.font = UIFont.boldSystemFont(ofSize: 14)
+        minuteLabel.font = UIFont.boldSystemFont(ofSize: 14)
+        secondLabel.font = UIFont.boldSystemFont(ofSize: 14)
+        
+        if(self.view.frame.width == 320)
+        {
+            hourLabel.font = UIFont.boldSystemFont(ofSize: 12)
+            minuteLabel.font = UIFont.boldSystemFont(ofSize: 12)
+            secondLabel.font = UIFont.boldSystemFont(ofSize: 12)
+        }
         
         hourLabel.textColor = UIColor.orange
         minuteLabel.textColor = UIColor.orange
