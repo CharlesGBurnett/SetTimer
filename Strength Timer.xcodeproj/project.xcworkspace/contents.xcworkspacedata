@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Set Timer.xcodeproj">
+      location = "self:/Users/charlesburnett/Programs/Set Timer/Strength Timer.xcodeproj">
    </FileRef>
 </Workspace>

@@ -253,6 +253,8 @@ class ViewController: UIViewController {
     @IBAction func unwindToThisView(sender: UIStoryboardSegue) {
             if let sourceViewController = sender.source as? PickerViewController {
                 self.counter = hoursMinutesSecondsToSeconds(hours: sourceViewController.hours, minutes: sourceViewController.minutes, seconds: sourceViewController.seconds)
+                invalidateTimer()
+                timerButton.setTitle("Start", for: UIControlState.normal)
         }
         
     }

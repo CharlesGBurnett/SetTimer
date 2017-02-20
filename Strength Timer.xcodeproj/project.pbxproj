@@ -36,17 +36,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		492776941DAB0CC9000B47B1 /* Set Timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Set Timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		492776941DAB0CC9000B47B1 /* Strength Timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Strength Timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		492776971DAB0CC9000B47B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		492776991DAB0CC9000B47B1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4927769C1DAB0CC9000B47B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4927769E1DAB0CC9000B47B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		492776A11DAB0CC9000B47B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		492776A31DAB0CC9000B47B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		492776A81DAB0CC9000B47B1 /* Set TimerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Set TimerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		492776A81DAB0CC9000B47B1 /* Strength TimerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Strength TimerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		492776AC1DAB0CC9000B47B1 /* Set_TimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Set_TimerTests.swift; sourceTree = "<group>"; };
 		492776AE1DAB0CC9000B47B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		492776B31DAB0CC9000B47B1 /* Set TimerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Set TimerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		492776B31DAB0CC9000B47B1 /* Strength TimerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Strength TimerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		492776B71DAB0CC9000B47B1 /* Set_TimerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Set_TimerUITests.swift; sourceTree = "<group>"; };
 		492776B91DAB0CC9000B47B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		494AAD281DC2CB5E005E334C /* PickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
@@ -81,7 +81,7 @@
 		4927768B1DAB0CC9000B47B1 = {
 			isa = PBXGroup;
 			children = (
-				492776961DAB0CC9000B47B1 /* Set Timer */,
+				492776961DAB0CC9000B47B1 /* Strength Timer */,
 				492776AB1DAB0CC9000B47B1 /* Set TimerTests */,
 				492776B61DAB0CC9000B47B1 /* Set TimerUITests */,
 				492776951DAB0CC9000B47B1 /* Products */,
@@ -91,14 +91,14 @@
 		492776951DAB0CC9000B47B1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				492776941DAB0CC9000B47B1 /* Set Timer.app */,
-				492776A81DAB0CC9000B47B1 /* Set TimerTests.xctest */,
-				492776B31DAB0CC9000B47B1 /* Set TimerUITests.xctest */,
+				492776941DAB0CC9000B47B1 /* Strength Timer.app */,
+				492776A81DAB0CC9000B47B1 /* Strength TimerTests.xctest */,
+				492776B31DAB0CC9000B47B1 /* Strength TimerUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		492776961DAB0CC9000B47B1 /* Set Timer */ = {
+		492776961DAB0CC9000B47B1 /* Strength Timer */ = {
 			isa = PBXGroup;
 			children = (
 				49D1D8C21DF68C02008949AE /* alarm.wav */,
@@ -110,6 +110,7 @@
 				492776A01DAB0CC9000B47B1 /* LaunchScreen.storyboard */,
 				492776A31DAB0CC9000B47B1 /* Info.plist */,
 			);
+			name = "Strength Timer";
 			path = "Set Timer";
 			sourceTree = "<group>";
 		};
@@ -134,9 +135,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		492776931DAB0CC9000B47B1 /* Set Timer */ = {
+		492776931DAB0CC9000B47B1 /* Strength Timer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 492776BC1DAB0CC9000B47B1 /* Build configuration list for PBXNativeTarget "Set Timer" */;
+			buildConfigurationList = 492776BC1DAB0CC9000B47B1 /* Build configuration list for PBXNativeTarget "Strength Timer" */;
 			buildPhases = (
 				492776901DAB0CC9000B47B1 /* Sources */,
 				492776911DAB0CC9000B47B1 /* Frameworks */,
@@ -146,14 +147,14 @@
 			);
 			dependencies = (
 			);
-			name = "Set Timer";
+			name = "Strength Timer";
 			productName = "Set Timer";
-			productReference = 492776941DAB0CC9000B47B1 /* Set Timer.app */;
+			productReference = 492776941DAB0CC9000B47B1 /* Strength Timer.app */;
 			productType = "com.apple.product-type.application";
 		};
-		492776A71DAB0CC9000B47B1 /* Set TimerTests */ = {
+		492776A71DAB0CC9000B47B1 /* Strength TimerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 492776BF1DAB0CC9000B47B1 /* Build configuration list for PBXNativeTarget "Set TimerTests" */;
+			buildConfigurationList = 492776BF1DAB0CC9000B47B1 /* Build configuration list for PBXNativeTarget "Strength TimerTests" */;
 			buildPhases = (
 				492776A41DAB0CC9000B47B1 /* Sources */,
 				492776A51DAB0CC9000B47B1 /* Frameworks */,
@@ -164,14 +165,14 @@
 			dependencies = (
 				492776AA1DAB0CC9000B47B1 /* PBXTargetDependency */,
 			);
-			name = "Set TimerTests";
+			name = "Strength TimerTests";
 			productName = "Set TimerTests";
-			productReference = 492776A81DAB0CC9000B47B1 /* Set TimerTests.xctest */;
+			productReference = 492776A81DAB0CC9000B47B1 /* Strength TimerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		492776B21DAB0CC9000B47B1 /* Set TimerUITests */ = {
+		492776B21DAB0CC9000B47B1 /* Strength TimerUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 492776C21DAB0CC9000B47B1 /* Build configuration list for PBXNativeTarget "Set TimerUITests" */;
+			buildConfigurationList = 492776C21DAB0CC9000B47B1 /* Build configuration list for PBXNativeTarget "Strength TimerUITests" */;
 			buildPhases = (
 				492776AF1DAB0CC9000B47B1 /* Sources */,
 				492776B01DAB0CC9000B47B1 /* Frameworks */,
@@ -182,9 +183,9 @@
 			dependencies = (
 				492776B51DAB0CC9000B47B1 /* PBXTargetDependency */,
 			);
-			name = "Set TimerUITests";
+			name = "Strength TimerUITests";
 			productName = "Set TimerUITests";
-			productReference = 492776B31DAB0CC9000B47B1 /* Set TimerUITests.xctest */;
+			productReference = 492776B31DAB0CC9000B47B1 /* Strength TimerUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -214,7 +215,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4927768F1DAB0CC9000B47B1 /* Build configuration list for PBXProject "Set Timer" */;
+			buildConfigurationList = 4927768F1DAB0CC9000B47B1 /* Build configuration list for PBXProject "Strength Timer" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -227,9 +228,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				492776931DAB0CC9000B47B1 /* Set Timer */,
-				492776A71DAB0CC9000B47B1 /* Set TimerTests */,
-				492776B21DAB0CC9000B47B1 /* Set TimerUITests */,
+				492776931DAB0CC9000B47B1 /* Strength Timer */,
+				492776A71DAB0CC9000B47B1 /* Strength TimerTests */,
+				492776B21DAB0CC9000B47B1 /* Strength TimerUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -294,12 +295,12 @@
 /* Begin PBXTargetDependency section */
 		492776AA1DAB0CC9000B47B1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 492776931DAB0CC9000B47B1 /* Set Timer */;
+			target = 492776931DAB0CC9000B47B1 /* Strength Timer */;
 			targetProxy = 492776A91DAB0CC9000B47B1 /* PBXContainerItemProxy */;
 		};
 		492776B51DAB0CC9000B47B1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 492776931DAB0CC9000B47B1 /* Set Timer */;
+			target = 492776931DAB0CC9000B47B1 /* Strength Timer */;
 			targetProxy = 492776B41DAB0CC9000B47B1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -423,10 +424,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 2UYM75F9BR;
 				INFOPLIST_FILE = "Set Timer/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.charlesburnett.Set-Timer";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.charlesburnett.Strength-Timer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -436,10 +438,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 2UYM75F9BR;
 				INFOPLIST_FILE = "Set Timer/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.charlesburnett.Set-Timer";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.charlesburnett.Strength-Timer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -455,7 +458,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.charlesburnett.Set-TimerTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Set Timer.app/Set Timer";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Strength Timer.app/Strength Timer";
 			};
 			name = Debug;
 		};
@@ -469,7 +472,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.charlesburnett.Set-TimerTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Set Timer.app/Set Timer";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Strength Timer.app/Strength Timer";
 			};
 			name = Release;
 		};
@@ -502,7 +505,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4927768F1DAB0CC9000B47B1 /* Build configuration list for PBXProject "Set Timer" */ = {
+		4927768F1DAB0CC9000B47B1 /* Build configuration list for PBXProject "Strength Timer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				492776BA1DAB0CC9000B47B1 /* Debug */,
@@ -511,7 +514,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		492776BC1DAB0CC9000B47B1 /* Build configuration list for PBXNativeTarget "Set Timer" */ = {
+		492776BC1DAB0CC9000B47B1 /* Build configuration list for PBXNativeTarget "Strength Timer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				492776BD1DAB0CC9000B47B1 /* Debug */,
@@ -520,7 +523,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		492776BF1DAB0CC9000B47B1 /* Build configuration list for PBXNativeTarget "Set TimerTests" */ = {
+		492776BF1DAB0CC9000B47B1 /* Build configuration list for PBXNativeTarget "Strength TimerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				492776C01DAB0CC9000B47B1 /* Debug */,
@@ -529,7 +532,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		492776C21DAB0CC9000B47B1 /* Build configuration list for PBXNativeTarget "Set TimerUITests" */ = {
+		492776C21DAB0CC9000B47B1 /* Build configuration list for PBXNativeTarget "Strength TimerUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				492776C31DAB0CC9000B47B1 /* Debug */,

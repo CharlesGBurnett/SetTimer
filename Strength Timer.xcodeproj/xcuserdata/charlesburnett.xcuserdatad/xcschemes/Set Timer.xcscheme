@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "492776931DAB0CC9000B47B1"
-               BuildableName = "Set Timer.app"
-               BlueprintName = "Set Timer"
-               ReferencedContainer = "container:Set Timer.xcodeproj">
+               BuildableName = "Strength Timer.app"
+               BlueprintName = "Strength Timer"
+               ReferencedContainer = "container:Strength Timer.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "492776A71DAB0CC9000B47B1"
-               BuildableName = "Set TimerTests.xctest"
-               BlueprintName = "Set TimerTests"
-               ReferencedContainer = "container:Set Timer.xcodeproj">
+               BuildableName = "Strength TimerTests.xctest"
+               BlueprintName = "Strength TimerTests"
+               ReferencedContainer = "container:Strength Timer.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "492776B21DAB0CC9000B47B1"
-               BuildableName = "Set TimerUITests.xctest"
-               BlueprintName = "Set TimerUITests"
-               ReferencedContainer = "container:Set Timer.xcodeproj">
+               BuildableName = "Strength TimerUITests.xctest"
+               BlueprintName = "Strength TimerUITests"
+               ReferencedContainer = "container:Strength Timer.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "492776931DAB0CC9000B47B1"
-            BuildableName = "Set Timer.app"
-            BlueprintName = "Set Timer"
-            ReferencedContainer = "container:Set Timer.xcodeproj">
+            BuildableName = "Strength Timer.app"
+            BlueprintName = "Strength Timer"
+            ReferencedContainer = "container:Strength Timer.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "492776931DAB0CC9000B47B1"
-            BuildableName = "Set Timer.app"
-            BlueprintName = "Set Timer"
-            ReferencedContainer = "container:Set Timer.xcodeproj">
+            BuildableName = "Strength Timer.app"
+            BlueprintName = "Strength Timer"
+            ReferencedContainer = "container:Strength Timer.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "492776931DAB0CC9000B47B1"
-            BuildableName = "Set Timer.app"
-            BlueprintName = "Set Timer"
-            ReferencedContainer = "container:Set Timer.xcodeproj">
+            BuildableName = "Strength Timer.app"
+            BlueprintName = "Strength Timer"
+            ReferencedContainer = "container:Strength Timer.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
