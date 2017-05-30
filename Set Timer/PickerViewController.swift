@@ -68,9 +68,7 @@ class PickerViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
         
     }
     
-    override func viewWillLayoutSubviews() {
-        print("width \(timePickerView.frame.width)")
-        
+    override func viewWillLayoutSubviews() {        
         let pickerWidth = self.view.frame.width
         
         var hourXVal = pickerWidth - 325.0

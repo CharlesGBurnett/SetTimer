@@ -51,6 +51,16 @@ class ViewController: UIViewController {
             selector: #selector(self.didEnterForeground),
             name: .UIApplicationDidBecomeActive,
             object: nil)
+        
+        
+        if let savedCounter = UserDefaults.standard.object(forKey: "counter") as? Int
+        {
+            counter = savedCounter
+        }
+        else
+        {
+            counter = 0
+        }
     }
     
     func didEnterForeground() {
@@ -96,17 +106,17 @@ class ViewController: UIViewController {
     }
     
     @IBAction func startPressed(_ sender: AnyObject) {
-        
-        if counter == 0 {
-            timerNotSetAlert()
-            return
-        }
             
-        else {
-        secondsForTimer = counter
+        if let existingTimer = UserDefaults.standard.object(forKey: "counter") as? Int {
+        secondsForTimer = existingTimer
         timeWhenStarted = NSDate().timeIntervalSince1970
         setBGNotification()
             startTimer(count:counter)
+        }
+        
+        else {
+            timerNotSetAlert()
+            return
         }
     }
     
@@ -122,18 +132,18 @@ class ViewController: UIViewController {
     }
     @IBAction func pauseTimer(_ sender: AnyObject) {
         if isPaused == false && counter >= 0 {
-        timer.invalidate()
-        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+            timer.invalidate()
+            UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
 
-        pauseButton.setTitle("Play", for: UIControlState.normal)
-        isPaused = true
+            pauseButton.setTitle("Play", for: UIControlState.normal)
+            isPaused = true
         }
         else if isPaused == true && counter >= 0 {
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
-        setBGNotification()
+            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
+            setBGNotification()
 
-        pauseButton.setTitle("Pause", for: UIControlState.normal)
-        isPaused = false
+            pauseButton.setTitle("Pause", for: UIControlState.normal)
+            isPaused = false
         }
     }
     
@@ -212,7 +222,7 @@ class ViewController: UIViewController {
         if isGrantedNotificationAccess{
             let content = UNMutableNotificationContent()
             content.title = "Timer's Done"
-            content.subtitle = "It's time to start your next set"
+            //content.subtitle = "Start your next set"
             content.body = "Tap to return to the app"
             content.sound = UNNotificationSound.init(named: "alarm.wav")
             
@@ -253,6 +263,7 @@ class ViewController: UIViewController {
     @IBAction func unwindToThisView(sender: UIStoryboardSegue) {
             if let sourceViewController = sender.source as? PickerViewController {
                 self.counter = hoursMinutesSecondsToSeconds(hours: sourceViewController.hours, minutes: sourceViewController.minutes, seconds: sourceViewController.seconds)
+                UserDefaults.standard.set(self.counter, forKey: "counter")
                 invalidateTimer()
                 timerButton.setTitle("Start", for: UIControlState.normal)
         }
